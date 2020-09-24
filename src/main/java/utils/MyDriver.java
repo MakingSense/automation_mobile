@@ -18,15 +18,27 @@ public class MyDriver {
 
         Logger.printInfo("Setting up the driver instance");
 
-        String fileLocation = "/Users/Fabian Andres Levin/ideaProjects/automation_mobile/src/main/resources/edmonton-qa-formio-renderer.apk";
+        /**
+         * THE FOLLOWING COMMENTED LINES ARE A SAMPLE IF YOU NEED TO USE AN APPLICATION APK
+         */
+        // String fileLocation = "ENTER_HERE_THE_PATH_TO_YOUR_APK/*.apk";
+        // File originalAppLocation = new File(fileLocation);
 
         URL connection = new URL("http://0.0.0.0:4723/wd/hub");
 
-        File originalAppLocation = new File(fileLocation);
-
+        /**
+         * This are the capabilities required to run a mobile application
+         */
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        /**
+            To execute the tests in a real android device set the following capability:
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
+         */
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_3_API_29");
-        capabilities.setCapability(MobileCapabilityType.APP, originalAppLocation);
+        // capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
+        capabilities.setCapability("chromedriverExecutable","/Users/Fabian Andres Levin/ideaProjects/automation_mobile/src/main/resources/chromedriver.exe");
+        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+        // capabilities.setCapability(MobileCapabilityType.APP, originalAppLocation);
         capabilities.setCapability("unicodeKeyboard", "true");
         capabilities.setCapability("resetKeyboard", "true");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
