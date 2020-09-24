@@ -30,9 +30,9 @@ public abstract class BaseTest {
     @BeforeClass
     public void setUp(String page) {
 
-        Logger.printInfo("Starting the tests set up");
-
         androidDriver.getDriver().get(page);
+
+        Logger.printInfo("Starting the tests set up");
     }
 
     /**
@@ -45,7 +45,7 @@ public abstract class BaseTest {
 
         androidDriver.getDriver().quit();
 
-        Logger.printDebug("Driver instance closed");
+        Logger.printInfo("Driver instance closed");
     }
 
     /**
