@@ -18,7 +18,7 @@ public class MyDriver {
 
         Logger.printInfo("Setting up the driver instance");
 
-        String fileLocation = "/Users/fabianandreslevin/IdeaProjects/lexis-nexis-mobile-app/src/main/resources/edmonton-qa-formio-renderer.apk";
+        String fileLocation = "/Users/Fabian Andres Levin/ideaProjects/automation_mobile/src/main/resources/edmonton-qa-formio-renderer.apk";
 
         URL connection = new URL("http://0.0.0.0:4723/wd/hub");
 
