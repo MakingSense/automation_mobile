@@ -33,7 +33,7 @@ export PATH=$PATH:ADB_HOME:$ANDROID_HOME:$ANDROID_HOME/tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH
 ```
-NOTE: In Windows, you should also add the path of adb.exe to the PATH variable, in my particular case is: `/Users/fabianandreslevin/Library/Android/sdk/platform-tools`
+NOTE: In Windows, you should also add the path of adb.exe to the PATH variable, in my particular case is: `C:\Users\Fabian Andres Levin\AppData\Local\Android\Sdk\platform-tools`
 
 Once the file has been edited to meet your system configuration, execute the following command:
 ```
